@@ -4,7 +4,7 @@ function loginWithCookies(state = undefined) {
     var str = document.cookie.split(";");
     console.log(str[0].substring(9, str[0].length));
     if (str != null)
-        loginUser(str[0].substring(9, str[0].length), str[1].substring(10, str[1].length), state);
+        loginUser(str[1].substring(10, str[1].length),str[0].substring(9, str[0].length), state);
 }
 
 function loginUser(email, password, state = undefined) {

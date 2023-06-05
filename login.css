@@ -1,0 +1,29 @@
+.login-input {
+    all: unset;
+    background-color: #252525;
+    font: 16px seurat_pro;
+    color: #fff;
+    height: 100%;
+    width: 300px;
+    min-width: 30%;
+    padding: 6px 10px;
+    margin: 6px;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-confirm {
+    all: unset;
+    cursor: pointer;
+    color: #fff;
+    background: #430015;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 0px 5px 0px 5px;
+    height: 36px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

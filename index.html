@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>nHentai Favourites</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <!--Firebase products below-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyCEgHUfZRqHcf9BPmGOfEk9JCLsxaypkg0",
+            authDomain: "nhentai-client.firebaseapp.com",
+            projectId: "nhentai-client",
+            storageBucket: "nhentai-client.appspot.com",
+            messagingSenderId: "75355152491",
+            appId: "1:75355152491:web:b1a5ad3389090f8d73512e",
+            measurementId: "G-J2W7C6WRMK"
+        };
+        // Initialise Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="account.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body onload="loginWithCookies('home')">
+    <div id="navbar" class="navbar">
+        <a href="" class="logo_link"><img src="assets/logo.png" alt="nHentai API-Client"></a>
+        <span class="version-tag"><a href="/">dev.0.2</a></span>
+        <a class="user-profile" id="user-profile" href="login.html"><img class="user-icon" src="assets/user.png" alt="user-icon"><span class="user-name" id="user-name">Sign in</span></a>
+    </div>
+
+    <div id="actions" class="actions">
+        <button type="button" onclick="newSection()">New Section</button>
+        <button type="button" onclick="reduceall()">Reduce All</button>
+        <button type="button" onclick="extendall()">Extend All</button>
+        <button type="button" onclick="createUserFavorites()">Update Favourites</button>
+    </div>
+
+    <div id="sections"></div>
+
+    <div id="allfavs">
+        <h2>All favorites <a onclick="reduce(this)">▲</a></h2>
+        <div id="main" class="wrapper"></div>
+    </div>
+</body>
+
+</html>
